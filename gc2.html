@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="emerald">
+<!-- Using Emerald theme for green base, will override with Tailwind -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Consumption - Cultivating Strategic Partnerships</title>
+    <!-- Tailwind CSS & DaisyUI via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Optional: Configure Tailwind -->
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'earthy-green-dark': '#2F4F4F', // Dark Slate Gray (like deep forest)
+                    'earthy-green-medium': '#556B2F', // Dark Olive Green
+                    'earthy-green-light': '#8FBC8F', // Dark Sea Green (softer accent)
+                    'stone-gray': '#778899',       // Light Slate Gray
+                    'warm-cream': '#F5F5DC',       // Beige / Cream
+                    'off-white': '#FAF3E0',        // Linen / Very light cream
+                }
+            }
+        }
+    }
+    </script>
+    <style type="text/tailwindcss">
+        /* Custom base styles for earthy feel */
+        body {
+            @apply bg-off-white text-stone-800; /* Base background and text */
+            font-family: sans-serif; /* Keep it clean and modern */
+        }
+        h1, h2, h3, h4, h5, h6 {
+           @apply font-sans; /* Or specify a slightly softer sans-serif if loaded */
+        }
+        h2 { @apply text-3xl font-bold text-earthy-green-dark md:text-4xl; }
+        h3 { @apply text-xl font-semibold text-earthy-green-dark; }
+
+        /* Component overrides for earthy theme */
+        .btn-primary {
+           @apply bg-earthy-green-medium border-earthy-green-medium hover:bg-earthy-green-dark hover:border-earthy-green-dark text-white;
+           /* Make primary button a solid earthy green */
+        }
+        .btn-outline.btn-primary {
+             @apply text-earthy-green-medium border-earthy-green-medium hover:bg-earthy-green-medium hover:text-white;
+        }
+        /* Adjust Navbar and Footer backgrounds */
+        .navbar {
+            @apply bg-white shadow-sm; /* Cleaner navbar background */
+        }
+         .footer {
+            @apply bg-earthy-green-dark text-off-white; /* Dark green footer */
+         }
+         .footer a {
+            @apply hover:text-earthy-green-light;
+         }
+         .footer-title {
+            @apply text-earthy-green-light opacity-80;
+         }
+         .hero-overlay { @apply bg-black/60; } /* Increase overlay darkness for readability */
+
+         /* Card styling */
+         .card { @apply bg-white shadow-lg rounded-xl; } /* Slightly softer edges */
+         .card-title { @apply text-earthy-green-dark; }
+         .testimonial-card { @apply bg-warm-cream border border-earthy-green-light/30; } /* Specific style for testimonials */
+
+         /* Section backgrounds */
+         .section-cream { @apply bg-off-white; }
+         .section-light-stone { @apply bg-stone-100; }
+
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 navbar">
+        <!-- Added bg-white shadow-sm via style block -->
+        <div class="container mx-auto px-4">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <button tabindex="0" class="btn btn-ghost text-earthy-green-dark lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+                    </button>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a href="#approach">Our Approach</a></li>
+                        <li><a href="#why-us">Why Us?</a></li>
+                        <li><a href="#success">Client Success</a></li>
+                        <li><a href="#insights">Insights</a></li>
+                    </ul>
+                </div>
+                <a href="#" class="btn btn-ghost text-2xl font-bold text-earthy-green-dark hover:bg-transparent">Good Consumption</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a href="#approach" class="text-stone-700 hover:text-earthy-green-medium">Our Approach</a></li>
+                    <li><a href="#why-us" class="text-stone-700 hover:text-earthy-green-medium">Why Us?</a></li>
+                    <li><a href="#success" class="text-stone-700 hover:text-earthy-green-medium">Client Success</a></li>
+                    <li><a href="#insights" class="text-stone-700 hover:text-earthy-green-medium">Insights</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <a href="#cta" class="btn btn-primary">Schedule a Consultation</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero min-h-[75vh]" style="background-image: url(https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80); background-position: center; background-size: cover;">
+            <!-- Image Source: Unsplash - Jeremy Bishop (Lush forest path) -->
+            <div class="hero-overlay"></div> <!-- Adjusted overlay via style block -->
+            <div class="hero-content text-center text-neutral-content relative z-10">
+                <div class="max-w-3xl">
+                    <h1 class="text-5xl font-bold leading-tight mb-6 text-white">Good Consumption: Precision Client Acquisition for Conscious Growth.</h1>
+                    <p class="py-6 text-lg text-gray-200">We cultivate strategic, high-value partnerships. We don't just generate leads; we nurture C-suite relationships and open doors to sustainable opportunities.</p>
+                    <a href="#cta" class="btn btn-primary btn-lg mr-4">Schedule Consultation</a>
+                    <a href="#approach" class="btn btn-outline text-white border-white hover:bg-white hover:text-earthy-green-dark btn-lg">Explore Our Approach ↓</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem / Opportunity Section -->
+        <section id="problem" class="py-20 section-cream">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="mb-8">Beyond Volume: Cultivating Strategic Partnerships.</h2>
+                <p class="max-w-3xl mx-auto text-lg text-stone-700 mb-6">
+                    Generic outbound creates noise, diluting your brand and rarely reaching the discerning decision-makers you seek. Engaging high-value prospects demands a thoughtful approach – grounded in deep market understanding, strategic precision, and authentic connection.
+                </p>
+                <p class="max-w-3xl mx-auto text-lg font-medium text-earthy-green-dark">
+                    Good Consumption is your dedicated strategic growth partner. We design and execute bespoke acquisition campaigns to connect you with C-suite leaders and key stakeholders in your most valued target accounts, prioritizing quality, discretion, and long-term alignment.
+                </p>
+            </div>
+        </section>
+
+        <!-- Our Approach Section -->
+        <section id="approach" class="py-20 section-light-stone">
+            <div class="container mx-auto px-4">
+                <h2 class="text-center mb-4">The Good Consumption Blueprint:</h2>
+                 <p class="text-center text-lg text-stone-700 mb-12 max-w-3xl mx-auto">A Bespoke Path to Meaningful Growth. Our methodology is collaborative, meticulous, and tailored to your unique vision, market position, and ideal client partnerships.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="p-6 rounded-lg text-center md:text-left">
+                        <!-- Heroicon: Map -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-earthy-green-medium mb-3 mx-auto md:mx-0">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503-8.455l-6.842 4.28m6.842-4.28l-6.842-4.28m0 12.02l6.842 4.28m0-4.28l6.842-4.28M3 10.5h18M3 10.5l-2.25-1.218M21 10.5l2.25-1.218m-16.5 6.75l-2.25 1.218M16.5 17.25l2.25 1.218m-16.5-6.75l6.842 4.28m6.842-4.28l6.842 4.28" />
+                        </svg>
+                        <h3 class="text-xl font-semibold mb-2">1. Deep Strategic Alignment</h3>
+                        <p class="text-stone-700">An immersive discovery to understand your purpose, ideal partners, market dynamics, and conscious growth ambitions. This is a strategic foundation.</p>
+                    </div>
+                    <div class="p-6 rounded-lg text-center md:text-left">
+                         <!-- Heroicon: User Group -->
+                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-earthy-green-medium mb-3 mx-auto md:mx-0">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                         </svg>
+                        <h3 class="text-xl font-semibold mb-2">2. Precision Partner Intelligence</h3>
+                        <p class="text-stone-700">Leveraging ethical research and premium data, we identify key individuals aligned with your values and strategic goals. Quality and fit are paramount.</p>
+                    </div>
+                     <div class="p-6 rounded-lg text-center md:text-left">
+                         <!-- Heroicon: Chat Bubble Left Right -->
+                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-earthy-green-medium mb-3 mx-auto md:mx-0">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-.111.009-.222.025-.33.046a2.11 2.11 0 00-1.444 1.887v4.286c0 .837.418 1.58 1.125 1.987l.75.429m7.5-8.644c.62.56 1.029 1.36 1.029 2.237v4.286c0 .877-.409 1.677-1.029 2.237m0 0l-3-3m-3.75 2.25c-.621 0-1.125-.504-1.125-1.125S8.379 13.5 9 13.5m12-3c-.621 0-1.125-.504-1.125-1.125S20.379 8.25 21 8.25m-12 3c0-.621.504-1.125 1.125-1.125s1.125.504 1.125 1.125m0 0c0 .621-.504 1.125-1.125 1.125S9 15.621 9 15m0 0v-2.25m12-3c0-.621.504-1.125 1.125-1.125s1.125.504 1.125 1.125m0 0c0 .621-.504 1.125-1.125 1.125S21 11.379 21 10.75m0 0v-2.25m-12 3c-.621 0-1.125-.504-1.125-1.125S8.379 13.5 9 13.5m-3 0c-.621 0-1.125-.504-1.125-1.125S5.379 8.25 6 8.25m0 0c.621 0 1.125.504 1.125 1.125S6.621 11.25 6 11.25m3 0v-2.25m6 3c0 .621-.504 1.125-1.125 1.125S13.875 15.621 13.875 15m0 0v-2.25" />
+                        </svg>
+                        <h3 class="text-xl font-semibold mb-2">3. Concierge Outreach</h3>
+                        <p class="text-stone-700">Our seasoned team executes personalized, multi-channel sequences that resonate with executives, acting as thoughtful ambassadors for your brand.</p>
+                    </div>
+                    <div class="p-6 rounded-lg text-center md:text-left">
+                         <!-- Heroicon: Arrow Path Rounded Square -->
+                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-earthy-green-medium mb-3 mx-auto md:mx-0">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                         </svg>
+                        <h3 class="text-xl font-semibold mb-2">4. Qualified Introductions & Insights</h3>
+                        <p class="text-stone-700">We facilitate meaningful introductions with genuinely interested prospects, providing continuous feedback and market intelligence for iterative refinement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Us Section -->
+        <section id="why-us" class="py-20 section-cream">
+            <div class="container mx-auto px-4">
+                <h2 class="text-center mb-4">The Art of Conscious Connection.</h2>
+                 <p class="text-center text-lg text-stone-700 mb-12 max-w-3xl mx-auto">Choosing a growth partner is a strategic decision. Good Consumption offers unparalleled service and expertise for businesses seeking significant, sustainable growth.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card">
+                        <div class="card-body">
+                             <h3 class="card-title">Quality & Fit Over Volume</h3>
+                             <p>Success is measured by the strategic value and alignment of connections, not mere quantity. Every interaction enhances your brand.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                             <h3 class="card-title">Deep Strategic Partnership</h3>
+                             <p>We operate as an extension of your leadership, deeply invested in your long-term success, market reputation, and ethical positioning.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                             <h3 class="card-title">Senior-Level Expertise</h3>
+                             <p>Our team comprises seasoned professionals adept at navigating complex B2B cycles and engaging C-suite leaders thoughtfully.</p>
+                        </div>
+                    </div>
+                     <div class="card">
+                        <div class="card-body">
+                             <h3 class="card-title">Uncompromising Brand Stewardship</h3>
+                             <p>Your reputation is paramount. Our outreach is sophisticated, respectful, and meticulously crafted to reflect your brand's integrity.</p>
+                        </div>
+                    </div>
+                     <div class="card">
+                        <div class="card-body">
+                             <h3 class="card-title">Absolute Discretion</h3>
+                             <p>We understand the sensitivity of strategic client acquisition and operate with the utmost confidentiality and professionalism.</p>
+                        </div>
+                    </div>
+                     <div class="card bg-earthy-green-medium text-white shadow-lg rounded-xl">
+                        <!-- Highlight card -->
+                        <div class="card-body items-center text-center">
+                             <h3 class="card-title text-white">Measurable Impact</h3>
+                             <p>We deliver tangible outcomes: qualified C-suite meetings and significant, sustainable pipeline opportunities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Who We Serve Section -->
+        <section id="who-we-serve" class="py-20 section-light-stone">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="mb-8">Partnering with Visionary Leaders.</h2>
+                <p class="max-w-3xl mx-auto text-lg text-stone-700 mb-10">
+                    Good Consumption is designed for established B2B organizations with complex value propositions, high-value partnerships, and a commitment to conscious growth. Accessing thoughtful C-suite decision-makers is crucial for our partners.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+                    <div class="badge badge-lg badge-outline border-earthy-green-medium text-earthy-green-medium p-4">Enterprise Technology & SaaS</div>
+                    <div class="badge badge-lg badge-outline border-earthy-green-medium text-earthy-green-medium p-4">Management Consulting</div>
+                    <div class="badge badge-lg badge-outline border-earthy-green-medium text-earthy-green-medium p-4">Professional Services</div>
+                    <div class="badge badge-lg badge-outline border-earthy-green-medium text-earthy-green-medium p-4">Sustainable Finance</div>
+                    <div class="badge badge-lg badge-outline border-earthy-green-medium text-earthy-green-medium p-4">Impact-Driven Organizations</div>
+                     <div class="badge badge-lg badge-outline border-earthy-green-medium text-earthy-green-medium p-4">B2B Cleantech</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Success Section -->
+        <section id="success" class="py-20 section-cream">
+            <div class="container mx-auto px-4">
+                <h2 class="text-center mb-12">Cultivating Premier Partnerships.</h2>
+
+                <!-- Logos Placeholder - Monochromatic/Subtle -->
+                <div class="text-center mb-16">
+                    <p class="text-lg font-semibold text-stone-700 mb-6">Trusted by leaders in Sustainable Tech, Finance, and Strategic Services</p>
+                    <div class="flex flex-wrap justify-center items-center gap-10 opacity-60 grayscale">
+                         <!-- Replace with actual client logos (SVG preferred for clean scaling) -->
+                         <img src="https://via.placeholder.com/150x50?text=Client+Logo+1" alt="Client Logo 1" class="h-8 md:h-10">
+                         <img src="https://via.placeholder.com/150x50?text=Client+Logo+2" alt="Client Logo 2" class="h-8 md:h-10">
+                         <img src="https://via.placeholder.com/150x50?text=Client+Logo+3" alt="Client Logo 3" class="h-8 md:h-10">
+                         <img src="https://via.placeholder.com/150x50?text=Client+Logo+4" alt="Client Logo 4" class="h-8 md:h-10">
+                         <img src="https://via.placeholder.com/150x50?text=Client+Logo+5" alt="Client Logo 5" class="h-8 md:h-10">
+                    </div>
+                </div>
+
+                <!-- Testimonials -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <div class="card testimonial-card">
+                        <div class="card-body">
+                            <p class="italic text-stone-800">"Good Consumption operates as true strategic partners. They delivered qualified C-suite introductions aligned with our values, something our team struggled to achieve with such precision."</p>
+                            <p class="mt-4 font-semibold text-earthy-green-dark">- CEO, Impact SaaS Firm</p>
+                        </div>
+                    </div>
+                     <div class="card testimonial-card">
+                        <div class="card-body">
+                            <p class="italic text-stone-800">"The professionalism and strategic foresight are exceptional. Good Consumption understands our market nuances and represents our brand with integrity and sophistication."</p>
+                            <p class="mt-4 font-semibold text-earthy-green-dark">- Partner, Global Sustainability Consultancy</p>
+                        </div>
+                    </div>
+                    <div class="card testimonial-card">
+                        <div class="card-body">
+                            <p class="italic text-stone-800">"We needed quality partnerships, not just volume. Good Consumption focused on securing meetings with the right VPs at aligned organizations, significantly boosting our strategic pipeline."</p>
+                            <p class="mt-4 font-semibold text-earthy-green-dark">- Head of Strategic Growth, B Corp</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Metrics -->
+                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <div class="text-5xl font-bold text-earthy-green-medium">75%</div>
+                        <p class="mt-2 text-lg text-stone-700">Introduction Rate at Target Aligned Accounts</p>
+                    </div>
+                    <div>
+                         <div class="text-5xl font-bold text-earthy-green-medium">$8M+</div>
+                         <p class="mt-2 text-lg text-stone-700">In Strategic Pipeline Generated within 6 Months</p>
+                    </div>
+                     <div>
+                         <div class="text-5xl font-bold text-earthy-green-medium">40%+</div>
+                         <p class="mt-2 text-lg text-stone-700">Meeting-to-Opportunity Conversion (C-Level)</p>
+                     </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- Insights Section Placeholder -->
+         <section id="insights" class="py-20 section-light-stone">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="mb-8">Strategic Insights for Conscious Growth</h2>
+                <p class="max-w-2xl mx-auto text-lg text-stone-700 mb-10">
+                    Explore our latest perspectives on building strategic B2B partnerships, engaging executives authentically, and navigating growth with purpose.
+                </p>
+                 <a href="#" class="btn btn-outline btn-primary">Explore Our Thinking</a>
+            </div>
+        </section>
+
+        <!-- Final Call to Action Section -->
+        <section id="cta" class="hero min-h-[50vh] bg-earthy-green-medium text-white">
+            <!-- Using medium green for CTA background -->
+            <div class="hero-content text-center">
+                <div class="max-w-md">
+                    <h2 class="text-4xl font-bold text-white">Ready to Cultivate Your Most Valuable Partnerships?</h2>
+                    <p class="py-6 text-gray-100">Discover how Good Consumption's bespoke, thoughtful approach can unlock strategic growth opportunities. Schedule a confidential consultation to explore alignment.</p>
+                    <button class="btn bg-white text-earthy-green-dark hover:bg-gray-200 border-0 btn-lg">Schedule Your Confidential Consultation</button>
+                     <p class="text-sm mt-4 opacity-80">A focused, strategic conversation awaits – no generic pitches.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer p-10">
+        <!-- Styles applied via style block -->
+        <aside>
+             <p class="text-2xl font-bold">Good Consumption</p>
+             <p>Cultivating Strategic Partnerships.<br>Driving Conscious Growth.</p>
+             <p>© 2024 Good Consumption. All Rights Reserved.</p> <!-- Updated Year -->
+        </aside>
+        <nav>
+            <h6 class="footer-title">Navigation</h6>
+            <a href="#approach" class="link link-hover">Our Approach</a>
+            <a href="#why-us" class="link link-hover">Why Us?</a>
+            <a href="#success" class="link link-hover">Client Success</a>
+            <a href="#insights" class="link link-hover">Insights</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Legal</h6>
+            <a href="#" class="link link-hover">Privacy Policy</a>
+            <a href="#" class="link link-hover">Terms of Service</a>
+        </nav>
+         <nav>
+            <h6 class="footer-title">Contact</h6>
+             <a href="#" class="link link-hover">123 Sustainable Ave, Suite 100, Greentown, GA 12345</a> <!-- Placeholder Address -->
+             <a href="mailto:connect@goodconsumption.example" class="link link-hover">connect@goodconsumption.example</a> <!-- Placeholder Email -->
+             <a href="tel:+15551234567" class="link link-hover">+1 (555) 123-4567</a> <!-- Placeholder Phone -->
+        </nav>
+    </footer>
+
+</body>
+</html>
